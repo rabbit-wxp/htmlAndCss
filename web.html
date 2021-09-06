@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta "charset=UTF-8" />
+    <title>冲鸭！</title>
+</head>
+
+<body>
+    <h1 id="tl">web前端开发</h1>
+    <h2>HTML</h2>
+    <p>超文本标记语言，用于构建网页结构。</p>
+    <hr />
+    <h2>CSS</h2>
+    <p>层叠样式表，用于构建网页布局。美化页面。</p>
+    <hr />
+    <h2>JS</h2>
+    <p>javascript，脚本语言，用于构建网页行为。</p>
+    <hr />
+    <p>代码yyds!</p>
+    <style>
+        #tl{
+            background: red;
+        }
+    </style>
+    <script>
+        const dom = document.querySelector('#tl');
+        dom.addEventListener('click',(ev)=>{
+            console.log(ev);
+        })
+        console.log();
+    </script>
+</body>
+
+</html>
