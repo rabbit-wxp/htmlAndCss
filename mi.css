@@ -1,0 +1,566 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:#b0b0b0 ;
+    font-size: 12px;
+    display: block;
+}
+a:hover{
+    color: #fff;
+}
+.line{
+    color: #424242;
+    font-size: 12px;
+    margin: 0 5px;
+}
+.topbar{
+    width:1226px;
+    height: 40px;
+    background-color: #333;
+    line-height: 40px;
+}
+.service li{
+    float: left;
+    
+}
+.service{
+    margin-left: 20px;
+}
+.topbar-nav-right li{
+    float: right;
+
+}
+.cart li{
+    width: 120px;
+    height: 40px;
+    background-color: #424242;
+    float: right;
+    text-align: center;
+    margin: 0 20px;
+}
+.cart a:hover{
+    color: #ff6700;
+    background-color:#fff;
+}
+.appcode{
+     
+     /* display: none; （先把二维码藏起来）*/
+     display: block;
+    /* 给包含二维码的div开启绝对定位 */
+    position: absolute;
+    /* 设置二维码居中 */
+    left: -37px;
+    width: 124px;
+    /* height: 148px; (把div高度变成0)*/
+    height: 0;
+    /* 隐藏二维码图片以达到效果 */
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    font-size: 14px ;
+    background-color: #fff;
+    color: black;
+    box-shadow:0 0 10px rgba(0, 0, 0, .3);
+    transition: height .3s;
+    z-index: 999;
+}
+.app:hover .appcode{
+    /* 添加二维码显示时高度为原来的148px */
+    display: block;
+    height: 148px;
+    
+}
+.app{
+    position: relative;
+}
+.app::after{
+     /* 先把小三角藏起来 */
+     display: none;
+    /* 设置小三角图标 */
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-color: #fff;
+    border-top: none;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.app:hover::after{
+    /* 小图标的显示真的好细节=-=
+    .app-li:hover >.app::after （刚开始是这样写的）*/
+    display: block;
+}
+.appcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+.appcode-font{
+    /* 设置小米商城APP字体颜色 */
+    display: block;
+   
+}
+.cart-li{
+    position: relative;
+}
+.cart .purchase{
+    /* display: none; */
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 0px;
+    background-color: #fff;
+    /* 框与车对齐 */
+    left: -200px;
+    box-shadow:0 0 10px rgba(0, 0, 0, .3);
+    font-size: 12px;
+    color: black;
+    /* 文字居中 */
+    line-height: 100px;
+    /* 隐藏溢出的文字 */
+    overflow: hidden;
+    /* 设置动画效果 */
+    transition: height .3s;
+}
+.cart-a:hover .purchase{
+    display: block;
+    height: 100px;
+} 
+/* ----------最顶层导航条完成-----------!!! */
+.header .mi-logo ,
+.header .mi-logo img{
+     width: 56px;
+     height: 56px;
+}
+.header .mi-logo img{
+    position: relative;
+   margin-top: 22.5px;
+   margin-left: 20px;
+}
+.header{
+    width: 1226px;
+    height: 100px;
+    background-color: #fff;
+}
+.header-center a{
+    display: block;
+    float: left;
+    color: #333;
+    font-size: 16px;
+    margin: auto 10px;
+    margin-top: -15px;
+}
+.header-center a:hover{
+    color: #ff6700;
+}
+.header-center{
+    margin-left: 240px;
+}
+.header-center .xiaomi{
+/* -------设置小米手机下的隐藏框 ----------- */
+display: block;
+position: absolute;
+width: 1226px;
+height: 0px;
+overflow: hidden;
+background-color: #fff;
+left: 0px;
+margin-top: 38px;
+box-shadow:0 5px 3px  rgba(0, 0, 0, .2);
+transition: height .3s;
+z-index: 9999;
+/* border-top: 1px solid rgb(224, 224, 224); */
+}
+.header-center .xiaomi:hover{
+    /* 让隐藏框hover时显示 */
+    display: block;
+    height:229px ;
+    border-top: 1px solid rgb(224, 224, 224);
+}
+.header-center .xiaomi-phone img{
+    width:160px;
+}
+.header-center .xiaomi-phone{
+    /* position: relative; */
+}
+.header-center .xiaomi-phone li{
+    float: left;
+    margin-top: 50px;
+    margin-left: 18px;
+}
+
+.header-center .xiaomi-phone li span{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    margin-top: 8px;
+}
+.header-center .xiaomi-phone li .number{
+    color: #ff6700;
+}
+.clearfix::before,
+.clearfix::after{
+    /* 清楚浮动，暂时没用 */
+    content: '';
+    display: table;
+    clear: both;
+}
+.header-center li.show:hover ~ .xiaomi{
+ /* -------设置小米手机下的隐藏框的显示效果-------- */
+display: block;
+height:229px;
+border-top: 1px solid rgb(224, 224, 224);
+}
+/* ------中间header以及下拉框完成-------！！！ */
+.search-div {
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: -32px;
+    background-color: #fff;
+}
+.search-div .search-input{
+    /* -------border-box?------ */
+    box-sizing: border-box;
+    float: left;
+    padding: 0 10px;
+    width: 244px;
+    height: 50px;
+    border: 1px solid rgb(224, 224, 224);
+    outline: none;
+}
+/* 分组选择器： */
+.search-div .search-input:focus,
+.search-div .search-input:focus+.search-btn{
+    border-color: #ff6700;
+}
+.search-div .search-btn{
+    float: left;
+    padding: 0;
+    width: 52px;
+    height: 50px;
+    border: none;
+    /* 放大镜的颜色 */
+    color: #616161;
+    background-color: #fff;
+    font-size: 18px;
+    /* 设置btn的左边框 */
+    border:1px solid rgb(224, 224, 224) ;
+    border-left: none;
+}
+.search-div .search-btn:hover{
+    background-color: #ff6700;
+    color: white;
+    border: none;
+}
+/* -----------右侧搜索框完成-------------- */
+
+.content{
+    position: relative;
+    width: 1226px;
+    height: 420px;
+}
+.left-menu{
+    position: absolute;
+    float: left;
+    width: 234px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 0;
+    margin-left: 20px;
+    margin-top: 18px;
+    line-height: 1;
+    /* 设置显示层级 */
+    z-index: 999;
+}
+.left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 30px;
+}
+.left-menu li:hover{
+    background-color: #ff6700;
+}
+
+.left-menu i{
+    float: right;
+    /* 设置小箭头的行高与a的行高一样，使其对齐排列 */
+    line-height: 42px;
+}
+/* ----------left-menu完成--------------- */
+.banner img{
+    position: absolute;
+    float: left;
+    width: 1226px;
+    height: 460px;
+}
+.pointer{
+    /* 设置绝对定位让圈圈出来 */
+    position: absolute;
+    right: 70px;
+}
+.pointer a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    margin-top: 420px;
+    margin-left:5px;
+    border: 2px solid rgba(0, 0, 0, .4);
+}
+.pointer a:hover ,.pointer .active{
+    background-color:rgba(0, 0, 0, .4) ;
+    border: 2px solid  rgba(255, 255, 255, .4);
+}
+.banner{
+    position: relative;
+}
+.angle{
+    position:absolute;
+    color: red;
+    font-size:px;
+    width:45px;
+    height: 100px;
+    left: 254px;
+    top: 160px;
+}
+.angle-right{
+    position: absolute;
+    color: rgb(42, 143, 138);
+    width: 45px;
+    height: 100px;
+    left: 1181px;
+    top: 160px;
+}
+.banner i{
+    font-size: 40px;
+    display: table;
+    line-height: 100px;
+    margin: auto;
+}
+.banner .angle-a:hover{
+background-color: rgba(0, 0, 0, 0.2);
+}
+/* ----------banner部分完成-------！！！ */
+.sidebar{
+    width: 26px;
+    height: 206px;
+    background-color: #fff;
+    float: left;
+    position: fixed;
+    right: 15px;
+}
+.sidebar a i{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    padding-top:19px ;
+}
+.sidebar a{
+    display: block;
+    /* border: 1px solid #f5f5f5; */
+
+}
+.sidebar a:hover{
+    color: #ff6700;
+}
+.sidebar .sidebar-img{
+    /* 设置图片效果 */
+    position: relative;
+    display: block;
+    width:120px;
+    height: 180px;
+    background-color: #fff;
+    position: absolute;
+    left: -140px;
+    top: 0px;
+    /*—————— 用visibility代替 overflow: hidden;—————— */
+    visibility: hidden;
+}
+.sidebar img{
+    position:absolute;
+    width:90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 20px;
+}
+.sidebar .sidebar-img span{
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    margin: 25px;
+    bottom: -8px;
+    color: #616161;
+}
+.sidebar .sidebar-img .sidebar-angle{
+    /* 不使用伪类设置小三角图标效果 */
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent ;
+    border-right: none;
+    border-left-color: #fff;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+/* 为什么要使用伪类？ */
+.sidebar-li a:hover >.sidebar-img{
+    /* 直接省去了display: block; height: 180px; 
+    简化代码*/
+    visibility: visible;
+}
+.sidebar .personal{
+    position: absolute;
+    background-color: #fff;
+    left: -80px;
+    top: 50px;
+    padding: 6px;
+    color: #616161;
+    visibility: hidden;
+}
+
+.sidebar .service{
+    position: absolute;
+    background-color: #fff;
+    left: -100px;
+    top: 90px;
+    padding: 6px;
+    color: #616161;
+    visibility: hidden;
+}
+.sidebar .customer-service{
+    position: absolute;
+    background-color: #fff;
+    left: -80px;
+    top: 125px;
+    padding: 6px;
+    color: #616161;
+    visibility: hidden;
+}
+.sidebar .cart{
+    position: absolute;
+    background-color: #fff;
+    left: -68px;
+    top: 14px;
+    padding: 6px;
+    color: #616161;
+    visibility: hidden;
+}
+.sidebar .personal::after,
+.sidebar .service::after,
+.sidebar .customer-service::after,
+.sidebar .cart::after{
+    content: '';
+    display: none;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-right: none;
+    border-left-color: #fff;
+    position: absolute;
+    right: -8px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.sidebar .personal-li:hover ::after,
+.sidebar .service-li:hover ::after,
+.sidebar .customer-li:hover ::after,
+.sidebar .cart-li:hover ::after{
+    display: block;
+}
+.sidebar .personal-li:hover .personal,
+.sidebar .service-li:hover .service,
+.sidebar .customer-li:hover .customer-service,
+.sidebar .cart-li:hover .cart{
+    visibility: visible;
+}
+/* -----------上半部分完美落幕----------！！！！ */
+.nether{
+    width: 1226px;
+    height: 170px;
+    background-color: #fff;
+    position: relative;
+    top: 472px;
+    float: left;
+    color: #CFCCCA;
+}
+.nether-left{
+    position: absolute;
+    width: 234px;
+    height: 100%;
+    background-color: #5f5750;
+    left: 20px;
+}
+.nether-left li{
+    position: relative;
+    top: 20px;
+}
+.nether .nether-img img{
+    width: 310px;
+    height: 170px;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.nether .nether-img li{
+    float: left;
+    position: relative;
+    left: 251px;
+    top: 0px;
+}
+.nether-left a{
+    display: block;
+    width: 76px;
+    height: 84px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+}
+.nether-left i{
+font-size: 22px;
+/* 把i设置成块元素 使文字换行下去 */
+display: block;
+padding-bottom: 10px;
+}
+.nether-left a::before{
+    content: '';
+    width: 50px;
+    height: 1px;
+    border-bottom: 1.5px solid rgb(102, 94, 87);
+    position: absolute;
+    top: 65px;
+    margin-left: -25px;
+}
+.nether-left li::after{
+    content: '';
+    width: 1px;
+    height: 130px;
+    border-left: 1px solid rgb(102, 94, 87);
+    position: absolute;
+    margin-left: -76px;
+    top: 0;
+}
+.nether-img img{
+    transition: all .3s;
+}
+.nether-img img:hover{
+    transform: rotateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
